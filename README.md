@@ -1,4 +1,4 @@
-# dsh-qq-suite
+﻿# dsh-qq-suite
 
 > 把 DSH 接进 QQ 之后长出来的八件事，拆成八个能单独跑、单独测、单独发的仓库。
 >
@@ -20,21 +20,21 @@
 
 | 仓库 | 一句话 | 对应账单主题（占比） | 测试 |
 |---|---|---|---|
-| [**qq-bridge**](https://github.com/Derpyu520/qq-bridge) | QQ ↔ DSH 桥接内核（旗舰） | 她在线聊天 47.3% + 插件安装与桥接 19.0% | 完整套件 |
-| [dsh-token-meter](https://github.com/Derpyu520/dsh-token-meter) | 把 DSH 会话日志算成 token 账单，含峰谷价 | 用量与成本核算 0.9% | 29 |
-| [dsh-qq-access](https://github.com/Derpyu520/dsh-qq-access) | 谁能和 agent 说话：白名单、黑名单、好友申请 | 好友 / 白名单 / 权限 6.3% | 20 |
-| [dsh-qq-voice](https://github.com/Derpyu520/dsh-qq-voice) | 语音库、音量处理、歌本点歌、OneBot 录音段 | 语音 / 唱歌 / 音色 3.2% | 16 |
-| [dsh-qq-stickers](https://github.com/Derpyu520/dsh-qq-stickers) | 表情库、情绪检索、表情摘要注入 | 表情包 / 斗图 2.4% | 13 |
-| [dsh-mcp-safe-tools](https://github.com/Derpyu520/dsh-mcp-safe-tools) | 只读搜索/抓取 MCP + SSRF 防护 + 出站脱敏 | 能力扩展 5.6% | 9 |
-| [dsh-session-link](https://github.com/Derpyu520/dsh-session-link) | 会话路由、跨会话近况、往事检索、关系图 | 群聊私聊行为调优 3.8% | 60 |
-| [dsh-persona-kit](https://github.com/Derpyu520/dsh-persona-kit) | 人格卡：模式分节、语气附录、预设校验 | 人格 / 角色卡 5.4% | 11 |
+| [**qq-bridge**](https://github.com/whatxin7/qq-bridge) | QQ ↔ DSH 桥接内核（旗舰） | 她在线聊天 47.3% + 插件安装与桥接 19.0% | 完整套件 |
+| [dsh-token-meter](https://github.com/whatxin7/dsh-token-meter) | 把 DSH 会话日志算成 token 账单，含峰谷价 | 用量与成本核算 0.9% | 29 |
+| [dsh-qq-access](https://github.com/whatxin7/dsh-qq-access) | 谁能和 agent 说话：白名单、黑名单、好友申请 | 好友 / 白名单 / 权限 6.3% | 20 |
+| [dsh-qq-voice](https://github.com/whatxin7/dsh-qq-voice) | 语音库、音量处理、歌本点歌、OneBot 录音段 | 语音 / 唱歌 / 音色 3.2% | 16 |
+| [dsh-qq-stickers](https://github.com/whatxin7/dsh-qq-stickers) | 表情库、情绪检索、表情摘要注入 | 表情包 / 斗图 2.4% | 13 |
+| [dsh-mcp-safe-tools](https://github.com/whatxin7/dsh-mcp-safe-tools) | 只读搜索/抓取 MCP + SSRF 防护 + 出站脱敏 | 能力扩展 5.6% | 9 |
+| [dsh-session-link](https://github.com/whatxin7/dsh-session-link) | 会话路由、跨会话近况、往事检索、关系图 | 群聊私聊行为调优 3.8% | 60 |
+| [dsh-persona-kit](https://github.com/whatxin7/dsh-persona-kit) | 人格卡：模式分节、语气附录、预设校验 | 人格 / 角色卡 5.4% | 11 |
 
 合计 **158 个离线测试**，全部不需要网络、不需要 QQ 账号、不需要模型 API。
 
 ## 十秒上手
 
 ```bash
-git clone https://github.com/Derpyu520/dsh-token-meter.git   # 不需要任何 key
+git clone https://github.com/whatxin7/dsh-token-meter.git   # 不需要任何 key
 cd dsh-token-meter && npm test && node bin/token-meter.mjs scan
 ```
 
@@ -85,4 +85,6 @@ cd dsh-token-meter && npm test && node bin/token-meter.mjs scan
 
 ## 许可
 
-MIT © Derpyu520。各仓库独立授权，LICENSE 就在各自根目录。
+MIT © whatxin7。各仓库独立授权，LICENSE 就在各自根目录。
+
+

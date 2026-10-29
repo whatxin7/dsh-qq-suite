@@ -1,4 +1,4 @@
-# dsh-qq-suite
+﻿# dsh-qq-suite
 
 > Eight repositories that grew out of plugging DSH (DeepSeek Harness) into QQ — each one independently cloneable, testable, and publishable.
 
@@ -14,21 +14,21 @@ These eight repositories are that work, split along "can it be tested alone" rat
 
 | Repo | What it does | Billing theme (share) | Tests |
 |---|---|---|---|
-| [**qq-bridge**](https://github.com/Derpyu520/qq-bridge) | QQ ↔ DSH bridge core (flagship) | online chat 47.3% + install/wiring 19.0% | full suite |
-| [dsh-token-meter](https://github.com/Derpyu520/dsh-token-meter) | Session-log token accounting, peak/off-peak pricing | usage & cost 0.9% | 29 |
-| [dsh-qq-access](https://github.com/Derpyu520/dsh-qq-access) | Who may talk to the agent: allow/deny lists, friend requests | friends / allow-list / permissions 6.3% | 20 |
-| [dsh-qq-voice](https://github.com/Derpyu520/dsh-qq-voice) | Voice library, ffmpeg volume/R128, songbook, OneBot record | voice / singing / timbre 3.2% | 16 |
-| [dsh-qq-stickers](https://github.com/Derpyu520/dsh-qq-stickers) | Sticker store, mood retrieval, injection block | stickers 2.4% | 13 |
-| [dsh-mcp-safe-tools](https://github.com/Derpyu520/dsh-mcp-safe-tools) | Read-only search/fetch MCP, SSRF guard, outbound redaction | capability expansion 5.6% | 9 |
-| [dsh-session-link](https://github.com/Derpyu520/dsh-session-link) | Session routing, cross-talk, recall RAG, relation graph | behaviour tuning 3.8% | 60 |
-| [dsh-persona-kit](https://github.com/Derpyu520/dsh-persona-kit) | Persona cards: mode sections, style appendix, preset validation | persona / role cards 5.4% | 11 |
+| [**qq-bridge**](https://github.com/whatxin7/qq-bridge) | QQ ↔ DSH bridge core (flagship) | online chat 47.3% + install/wiring 19.0% | full suite |
+| [dsh-token-meter](https://github.com/whatxin7/dsh-token-meter) | Session-log token accounting, peak/off-peak pricing | usage & cost 0.9% | 29 |
+| [dsh-qq-access](https://github.com/whatxin7/dsh-qq-access) | Who may talk to the agent: allow/deny lists, friend requests | friends / allow-list / permissions 6.3% | 20 |
+| [dsh-qq-voice](https://github.com/whatxin7/dsh-qq-voice) | Voice library, ffmpeg volume/R128, songbook, OneBot record | voice / singing / timbre 3.2% | 16 |
+| [dsh-qq-stickers](https://github.com/whatxin7/dsh-qq-stickers) | Sticker store, mood retrieval, injection block | stickers 2.4% | 13 |
+| [dsh-mcp-safe-tools](https://github.com/whatxin7/dsh-mcp-safe-tools) | Read-only search/fetch MCP, SSRF guard, outbound redaction | capability expansion 5.6% | 9 |
+| [dsh-session-link](https://github.com/whatxin7/dsh-session-link) | Session routing, cross-talk, recall RAG, relation graph | behaviour tuning 3.8% | 60 |
+| [dsh-persona-kit](https://github.com/whatxin7/dsh-persona-kit) | Persona cards: mode sections, style appendix, preset validation | persona / role cards 5.4% | 11 |
 
 **158 offline tests.** No network, no QQ account, no model API required.
 
 ## Ten-second start
 
 ```bash
-git clone https://github.com/Derpyu520/dsh-token-meter.git
+git clone https://github.com/whatxin7/dsh-token-meter.git
 cd dsh-token-meter && npm test && node bin/token-meter.mjs scan
 ```
 
@@ -74,4 +74,6 @@ Full breakdown in [TOKEN-STORY.md](TOKEN-STORY.md) — daily table, top sessions
 
 ## License
 
-MIT © Derpyu520. Each repository is licensed independently; the LICENSE file lives at its root.
+MIT © whatxin7. Each repository is licensed independently; the LICENSE file lives at its root.
+
+
