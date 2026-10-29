@@ -1,0 +1,33 @@
+name: docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 必需文档存在
+        run: |
+          set -e
+          for f in README.md README.en.md ARCHITECTURE.md TOKEN-STORY.md LICENSE; do
+            test -s "$f" || { echo "缺少 $f"; exit 1; }
+          done
+
+      - name: 没有遗留占位符
+        run: |
+          set -e
+          if grep -nE 'TODO|FIXME|XXX|<placeholder>' README.md README.en.md ARCHITECTURE.md TOKEN-STORY.md; then
+            echo "文档里还有占位符"; exit 1
+          fi
+
+      - name: 仓库地图里的每个仓库都被链接了
+        run: |
+          set -e
+          for r in qq-bridge dsh-token-meter dsh-qq-access dsh-qq-voice dsh-qq-stickers dsh-mcp-safe-tools dsh-session-link dsh-persona-kit; do
+            grep -q "$r" README.md || { echo "README 没提到 $r"; exit 1; }
+          done
