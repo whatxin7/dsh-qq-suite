@@ -16,6 +16,33 @@
 
 于是我把这七天的产出整理成八个仓库。每个仓库对应账单里的一个主题桶，边界按「能不能独立测试」划，不是按文件夹划。
 
+## 怎么装
+
+先说清楚：**这里没有 DSH 插件，也没有 skill。** 六个数一数：
+
+| 类型 | 仓库 | 装完得到 |
+|---|---|---|
+| 命令行工具 | token-meter · qq-access · voice · stickers · session-link · persona-kit | 一个命令（`token-meter`、`voice`…） |
+| MCP server | mcp-safe-tools | 不是命令，被 MCP 客户端当子进程启动 |
+| 文档 | 本仓库 | 没有代码 |
+
+```bash
+# 试用（零安装，需要 node >= 20 + git）
+npx github:whatxin7/dsh-token-meter scan
+
+# 装成全局命令
+npm i -g github:whatxin7/dsh-token-meter
+
+# 一次拉全部（含全局安装可选）
+powershell -ExecutionPolicy Bypass -File install.ps1 -Tools   # Windows（在 dsh-qq-suite 目录里）
+./install.sh --tools                                          # macOS / Linux
+```
+
+> ⚠️ `dsh-token-meter`、`dsh-qq-access`、`dsh-session-link` 这三个名字在 npm 上**已被别人的项目占用**，
+> 写 `npm i dsh-token-meter` 装到的是别人的包。本项目只走 `github:whatxin7/...`，以后发 npm 会用 `@whatxin7/...`。
+
+完整说明（三种装法 / MCP 配置片段 / 一键脚本 / 更新方式）：**[INSTALL.md](INSTALL.md)**
+
 ## 仓库地图
 
 | 仓库 | 一句话 | 对应账单主题（占比） | 测试 |
@@ -80,6 +107,7 @@ cd dsh-token-meter && npm test && node bin/token-meter.mjs scan
 
 ## 文档
 
+- [INSTALL.md](INSTALL.md) —— 三种装法、MCP 配置、一键脚本
 - [ARCHITECTURE.md](ARCHITECTURE.md) —— 分层、数据流、每条边界为什么要这么划
 - [TOKEN-STORY.md](TOKEN-STORY.md) —— 18.9 亿 token 的账单与结论
 

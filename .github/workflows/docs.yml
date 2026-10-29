@@ -1,4 +1,4 @@
-name: docs
+﻿name: docs
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
       - name: 必需文档存在
         run: |
           set -e
-          for f in README.md README.en.md ARCHITECTURE.md TOKEN-STORY.md LICENSE; do
+          for f in README.md README.en.md INSTALL.md ARCHITECTURE.md TOKEN-STORY.md LICENSE; do
             test -s "$f" || { echo "缺少 $f"; exit 1; }
           done
 
@@ -31,3 +31,4 @@ jobs:
           for r in qq-bridge dsh-token-meter dsh-qq-access dsh-qq-voice dsh-qq-stickers dsh-mcp-safe-tools dsh-session-link dsh-persona-kit; do
             grep -q "$r" README.md || { echo "README 没提到 $r"; exit 1; }
           done
+
